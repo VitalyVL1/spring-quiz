@@ -27,7 +27,7 @@ public class ReportGenerator {
 
     public void generate(QuizLog quizLog) {
         // если генерация отчёта отключена, завершаем метод
-        if(!reportSettings.isEnabled()) {
+        if (!reportSettings.isEnabled()) {
             log.debug("Вывод отчёта отключён, генерация отчёта прекращена");
             return;
         }
@@ -53,7 +53,7 @@ public class ReportGenerator {
     private void write(QuizLog quizLog, PrintWriter writer) {
         writer.println("Отчёт о прохождении теста " + reportTitle + "\n");
         for (QuizLog.Entry entry : quizLog) {
-            if(reportSettings.getMode().equals(VERBOSE)) {
+            if (reportSettings.getMode().equals(VERBOSE)) {
                 writeVerbose(writer, entry);
             } else {
                 writeConcise(writer, entry);

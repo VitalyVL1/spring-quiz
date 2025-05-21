@@ -16,7 +16,7 @@ public class QuizConfig {
     public QuizConfig(int defaultAttempts, List<Question> questions) {
         this.questions = questions.stream()
                 .peek(question -> {
-                    if(question.getAttempts() == null) {
+                    if (question.getAttempts() == null) {
                         question.setAttempts(defaultAttempts);
                     }
                 })
