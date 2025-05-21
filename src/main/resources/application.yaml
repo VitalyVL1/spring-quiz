@@ -1,3 +1,13 @@
+spring:
+  main:
+    #вывод информации о приложении при запуске (true, false)
+    log-startup-info: false
+    #вывод стартового баннера (log, console, off)
+    banner-mode: console
+    #конфигурирование вывода ANSI (в нашем случае изменение цвета баннера)
+    output.ansi.enabled: ALWAYS
+
+
 spring-quiz:
   title: "Тест по Spring Framework"
 
